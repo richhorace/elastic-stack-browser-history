@@ -25,9 +25,8 @@ Within 10 minutes:
 - url
 - title
 
-As you can see, I've been a long time user of Pocket even before it was rebranded from Read It Later.
 
-##### Prerequisites
+#### Prerequisites
 
 Example has been tested on Mac with the following versions:
 - Elasticsearch 7.8.0
