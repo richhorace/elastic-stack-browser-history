@@ -38,7 +38,7 @@ ORDER BY visit_date DESC
 
 ## Getting Started
 
-Within 10 minutes (after docker image pulls), you have have all your browser history in Elastic Stack.
+Within 10 minutes (after docker image pulls), you will have all your browser(s) history in Elastic Stack.
 
 <em>**Note:** You need to exit your browser(s). SQLite database does not have a with_no_lock option. If you do not quit your browser, the python script will error.</em>
 
@@ -96,4 +96,4 @@ After Kibana is ready you can load dashboard with the Import Dashboard API (expe
 4. Select **Import**
 5. Select Browser History Dashboard
 
-Done!
+## Done!
