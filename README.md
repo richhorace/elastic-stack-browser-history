@@ -99,6 +99,5 @@ After Kibana is ready you can load dashboard with the Import Dashboard API (expe
 ## Done!
 
 # ToDo
-- Add syntax browser-history.py to create data/logs if doesn't exist.
 - Workflow Recommendations
 - Gotchas 

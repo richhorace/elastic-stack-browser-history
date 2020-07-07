@@ -5,7 +5,7 @@ import sqlite3
 import time
 
 from config import USER_PATH
- 
+from local import LOG_DIR
 
 def get_path(browser,browser_params):
     if browser == 'brave':
@@ -74,7 +74,7 @@ def get_browser_hist(browser_params,timestr):
 
     if results >0:
         dict_bn = {"browser":bn}
-        jsonFile = open("../data/logs/"+ bn + "-" + timestr + ".json","w")
+        jsonFile = open(LOG_DIR + "/"+ bn + "-" + timestr + ".json","w")
 
         for v in tables:
             v.update(dict_bn)
