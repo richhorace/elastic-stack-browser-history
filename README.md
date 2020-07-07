@@ -97,3 +97,8 @@ After Kibana is ready you can load dashboard with the Import Dashboard API (expe
 5. Select Browser History Dashboard
 
 ## Done!
+
+# ToDo
+- Add syntax browser-history.py to create data/logs if doesn't exist.
+- Workflow Recommendations
+- Gotchas 
