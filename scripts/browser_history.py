@@ -6,6 +6,9 @@ import time
 from local import LOG_DIR
 from pathlib import Path
 
+# Update the list based on the Browsers you use
+browsers = ['brave','chrome','firefox','safari','edge']
+
 USER_PATH = str(Path.home())
 
 def get_path(browser,browser_params):
@@ -84,7 +87,6 @@ def get_browser_hist(browser_params,timestr):
 
 def main():
     timestr = time.strftime("%Y%m%d-%H%M%S")
-    browsers = ['brave','chrome','firefox','safari','edge']
     for browser in browsers:
         print("Starting {}".format(browser))
         browser_params = {}

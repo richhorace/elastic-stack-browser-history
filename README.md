@@ -6,6 +6,19 @@ This project's goal is improve the "history search problem" of the major Chromiu
 
 If you search for "Browser History", you'll find more posts about Privacy, VPNs and other ways to protect your search history. Very few will discuss better ways to use or analyze your browser history. If you do find a solution, it will usually show you how to export history into a cvs file.
 
+## TLDR;
+Follow these steps to get started:
+
+```shell
+git clone git@github.com:richhorace/elastic-stack-browser-history.git
+cd elastic-stack-browser-history/scripts
+pyton browser-history.py
+cd ..
+docker-compose -f docker-compose-ingest.yml up
+open http://localhost:5601
+```
+
+Then follow: [Load pre-made Visualizations and Dashboards](#3.-Load-pre-made-Visualizations-and-Dashboards)
 
 ## All Browsers below save settings and history data to SQLite database
 
@@ -35,12 +48,11 @@ ORDER BY visit_date DESC
 ![](./images/BrowserHistoryDashboard.png)
 
 
-
 ## Getting Started
 
 Within 10 minutes (after docker image pulls), you will have all your browser(s) history in Elastic Stack.
 
-<em>**Note:** You need to exit your browser(s). SQLite database does not have a with_no_lock option. If you do not quit your browser, the python script will error.</em>
+<em>**Note:** You need to exit your browser(s). SQLite database does not have a with_no_lock option. If you do not quit your browser, the python script will error with: [BROWSER_NAME]!! IS OPEN. PLEASE CLOSE YOUR BROWSER AND RETRY..</em>
 
 ### Prerequisites
 
@@ -98,6 +110,20 @@ After Kibana is ready you can load dashboard with the Import Dashboard API (expe
 
 ## Done!
 
-# ToDo
-- Workflow Recommendations
-- Gotchas 
+
+## Launch Elastic Stack to Review Data
+You can start the Stack with only Elasticsearch and Kibana to view existing data.
+
+	Start: `docker-compose -f docker-compose-minimal.yml up`
+	Stop: `docker-compose -f docker-compose-minimal.yml down`
+
+
+## Gotchas
+1. Not Clearing Browser History: If you do not clear your browser history then you will duplicate your old browsing history. 
+
+	Run docker-compose down with -v to delete docker volume
+	```shell
+	docker-compose down -v
+	```
+
+2. Clearing Browser History: If you are clearing your browser history **backup your history** files. 
