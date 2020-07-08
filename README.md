@@ -18,7 +18,7 @@ docker-compose -f docker-compose-ingest.yml up
 open http://localhost:5601
 ```
 
-Then follow: [Load pre-built Visualizations and Dashboards](##3.-Load-pre-built-Visualizations-and-Dashboards)
+Then follow: [Load pre-built Visualizations and Dashboards](#3.-Load-pre-built-Visualizations-and-Dashboards)
 
 ## All Browsers below save settings and history data to SQLite database
 
