@@ -18,7 +18,7 @@ docker-compose -f docker-compose-ingest.yml up
 open http://localhost:5601
 ```
 
-Then follow: [Load pre-made Visualizations and Dashboards](#3.-Load-pre-made-Visualizations-and-Dashboards)
+Then follow: [Load pre-built Visualizations and Dashboards](#3.-Load-pre-built-Visualizations-and-Dashboards)
 
 ## All Browsers below save settings and history data to SQLite database
 
@@ -50,7 +50,7 @@ ORDER BY visit_date DESC
 
 ## Getting Started
 
-Within 10 minutes (after docker image pulls), you will have all your browser(s) history in Elastic Stack.
+Within 5 minutes (after docker image pulls), you will have all your browser(s) history in Elastic Stack.
 
 <em>**Note:** You need to exit your browser(s). SQLite database does not have a with_no_lock option. If you do not quit your browser, the python script will error with: [BROWSER_NAME]!! IS OPEN. PLEASE CLOSE YOUR BROWSER AND RETRY..</em>
 
@@ -100,7 +100,7 @@ edge: Results 2
 	docker-compose -f docker-compose-ingest.yml up
 	```
 
-## 3. Load pre-made Visualization and Dashboards
+## 3. Load pre-built Visualization and Dashboards
 After Kibana is ready you can load dashboard with the Import Dashboard API (experimental feature)
 1. From Kibana sidebar, navigate to **Stack Management**
 2. Under Kibana select **Saved Objects**
