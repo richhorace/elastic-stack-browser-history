@@ -18,7 +18,7 @@ docker-compose -f docker-compose-ingest.yml up
 open http://localhost:5601
 ```
 
-Then follow: [Load pre-built Visualizations and Dashboards](#3.-Load-pre-built-Visualizations-and-Dashboards)
+Then follow: [Load pre-built Visualizations and Dashboards](##3.-Load-pre-built-Visualizations-and-Dashboards)
 
 ## All Browsers below save settings and history data to SQLite database
 
@@ -67,8 +67,7 @@ Example has been tested on Mac with the following versions:
 ### 1. Extract Browser Data
 
 After cloning the repo complete the following to extract browser data.
-1. From the scripts folder, rename or copy `UPDATE-config.py` to `config.py` then update file with your local user path. 
-2. Run browser-history python script:
+1. From the scripts folder, run browser-history python script:
 
 ```shell
 cd scripts
@@ -100,7 +99,8 @@ edge: Results 2
 	docker-compose -f docker-compose-ingest.yml up
 	```
 
-## 3. Load pre-built Visualization and Dashboards
+## 3. Load pre-built Visualizations and Dashboards
+
 After Kibana is ready you can load dashboard with the Import Dashboard API (experimental feature)
 1. From Kibana sidebar, navigate to **Stack Management**
 2. Under Kibana select **Saved Objects**
@@ -112,10 +112,10 @@ After Kibana is ready you can load dashboard with the Import Dashboard API (expe
 
 
 ## Launch Elastic Stack to Review Data
-You can start the Stack with only Elasticsearch and Kibana to view existing data.
+You can start the Stack with only **Elasticsearch** and **Kibana** to view existing data.
 
-	Start: `docker-compose -f docker-compose-minimal.yml up`
-	Stop: `docker-compose -f docker-compose-minimal.yml down`
+	Start: `docker-compose -f docker-compose.yml up`
+	Stop: `docker-compose -f docker-compose.yml down`
 
 
 ## Gotchas
